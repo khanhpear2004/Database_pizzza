@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HÀNG CHỜ ĐƠN HÀNG</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
+                    <!-- <img src="../img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="index.html" class="nav-item nav-link">Trang chủ</a>
+                        <a href="order_queue_staff.html" class="nav-item nav-link active">Đơn hàng</a>
+                        <a href="ca_truc.html" class="nav-item nav-link">Ca trực</a>
+                        <a href="lich_su.html" class="nav-item nav-link">Lịch sử</a>
+                        <a href="kho_hang.html" class="nav-item nav-link">Kho hàng</a>
+                    </div>
+                    <div class="dropdown">
+                        <div style="position: relative; display: inline-block;">
+                            <img class="rounded-circle dropdown dropdown-toggle" style="width: 45px;" alt="Avatar" data-bs-toggle="dropdown" aria-expanded="false" src="https://s3-alpha-sig.figma.com/img/9a6b/f24f/3ab2b1f66c877c09a8254f7601865724?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hCt-~97g9BrTKv57cFJeTu2RAGILy9HoPH9gqZq1gC-W6Pom5sRxpIndD~Z7NJM8SFV43Fp0MHjDNafgGD0EzDmn6VikUvhjys3ZS6B0d0CJZUV1PNJQfYnFURmm7W6seiy-f2ro-R5~Tl6yQ~7HdInQ8brn1zMETIw2jHWXprG72y2r9vzy5xOQ7TUAtsmAzq-~6GooSsigJQRJlEDN9lsuaI0J~f~c4cOVZnK8QKDEds4GxfQYEkRPWh14wU0HHm~1ffUqI~kMvcCVXkuHX9PcE04EFVppYf2wF7sElDC1RPLPutylw7K9Gi7vv0z2BdBYR5BpMF8Sl0MP4xugyA__"/>
+                            <div style="position: absolute; bottom: 0; right: 0; width: 20px; height: 20px; background-color: pink; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 12px; color: white; font-weight: bold; border: 2px solid white; box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);">
+                                <span>V</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                        </ul>
+                    </div>                    
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Menu Start -->
+        <div class="container-xxl">
+            <div class="container">
+                <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                    <p class="text-uppercase" style="font-size: 48px; font-weight: 600; line-height: 62.4px; color: black;">
+                        HÀNG CHỜ ĐƠN HÀNG
+                    </p>
+                </div>  
+                
+                <div class="row">
+                    <div class="col col-8" style="max-height: 550px; border: 1px solid black; border-radius: 15px; padding: 10px 10px 0px;">
+                        <p style="font-size: 40px; font-weight: 600; line-height: 52px; color: #DC802A;" align="center">
+                            ĐƠN HÀNG
+                        </p>
+
+                        <p style="color: #FD080C; font-size: 20px; font-style: italic; font-weight: 500; line-height: 26px;">
+                            Số đơn hàng chưa hoàn thành: 10 
+                        </p>
+
+                        <div id="list-hang-cho-don-hang" class="overflow-auto" style="max-height: 400px;">
+                            <div class="row" style="border: 1px solid black; border-radius: 10px; margin: 0px 12px 10px;">
+                                <div class="col col-6" style="padding: 9px 9px 0px;">
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">MÃ ĐƠN HÀNG: </nobr>
+                                        <nobr id="ma-don-hang">O-000001</nobr>
+                                    </p>
+    
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">THỜI GIAN NHẬN: </nobr>
+                                        <nobr id="thoi-gian-nhan">19:30 - 31/07/2004</nobr>
+                                    </p>
+    
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">ID BÀN ĂN: </nobr>
+                                        <nobr id="id-ban-an">8</nobr>
+                                    </p>
+                                </div>
+    
+                                <div class="col col-6" style="padding: 9px 9px 0px;">
+                                    <p style="font-size: 16px; font-style: italic; font-weight: 400; line-height: 20.8px; color: #FD080C; float: right; margin-right: 20px;">
+                                        Tình trạng: Chưa Hoàn Thành
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="row" style="border: 1px solid black; border-radius: 10px; margin: 0px 12px 10px;">
+                                <div class="col col-6" style="padding: 9px 9px 0px;">
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">MÃ ĐƠN HÀNG: </nobr>
+                                        <nobr id="ma-don-hang">O-000001</nobr>
+                                    </p>
+    
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">THỜI GIAN NHẬN: </nobr>
+                                        <nobr id="thoi-gian-nhan">19:30 - 31/07/2004</nobr>
+                                    </p>
+    
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">ID BÀN ĂN: </nobr>
+                                        <nobr id="id-ban-an">8</nobr>
+                                    </p>
+                                </div>
+    
+                                <div class="col col-6" style="padding: 9px 9px 0px;">
+                                    <p style="font-size: 16px; font-style: italic; font-weight: 400; line-height: 20.8px; color: #FD080C; float: right; margin-right: 20px;">
+                                        Tình trạng: Chưa Hoàn Thành
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid black; border-radius: 10px; margin: 0px 12px 10px;">
+                                <div class="col col-6" style="padding: 9px 9px 0px;">
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">MÃ ĐƠN HÀNG: </nobr>
+                                        <nobr id="ma-don-hang">O-000001</nobr>
+                                    </p>
+    
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">THỜI GIAN NHẬN: </nobr>
+                                        <nobr id="thoi-gian-nhan">19:30 - 31/07/2004</nobr>
+                                    </p>
+    
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">ID BÀN ĂN: </nobr>
+                                        <nobr id="id-ban-an">8</nobr>
+                                    </p>
+                                </div>
+    
+                                <div class="col col-6" style="padding: 9px 9px 0px;">
+                                    <p style="font-size: 16px; font-style: italic; font-weight: 400; line-height: 20.8px; color: #FD080C; float: right; margin-right: 20px;">
+                                        Tình trạng: Chưa Hoàn Thành
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid black; border-radius: 10px; margin: 0px 12px 10px;">
+                                <div class="col col-6" style="padding: 9px 9px 0px;">
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">MÃ ĐƠN HÀNG: </nobr>
+                                        <nobr id="ma-don-hang">O-000001</nobr>
+                                    </p>
+    
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">THỜI GIAN NHẬN: </nobr>
+                                        <nobr id="thoi-gian-nhan">19:30 - 31/07/2004</nobr>
+                                    </p>
+    
+                                    <p style="color: black; font-size: 20px; font-weight: 600; line-height: 26px;">
+                                        <nobr style="color: #DC802A;">ID BÀN ĂN: </nobr>
+                                        <nobr id="id-ban-an">8</nobr>
+                                    </p>
+                                </div>
+    
+                                <div class="col col-6" style="padding: 9px 9px 0px;">
+                                    <p style="font-size: 16px; font-style: italic; font-weight: 400; line-height: 20.8px; color: #FD080C; float: right; margin-right: 20px;">
+                                        Tình trạng: Chưa Hoàn Thành
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-4">
+                        <p style="color: #DC802A; font-size: 20px; font-weight: 600; line-height: 26px;" align="center">
+                            CHI TIẾT ĐƠN HÀNG
+                        </p>
+
+                        <div id="chi-tiet-don-hang-x" class="overflow-auto" style="max-height: 500px; width: 100%; padding: 20px;">
+                            <div class="row" style="width: 100%; height: auto; border: 1px solid black; border-radius: 10px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 10px;">
+                                <div class="col col-3">
+                                    <img style="width: 111px; height: 85px; border-radius: 10px;" src="https://s3-alpha-sig.figma.com/img/1563/be4b/0ecd51c107707964cb0b4c400bac2b06?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c-Y3lEvSFRVrzelppLoscL4cQBt-6r90UDU8yNX7S1LDPdmGLW-FJ97rqZET0T6Vs2W70hvtBUTs0d3RXLCf-Sf6zrMFcCgo9MUFJS~TDWO6~zyvpU58-feGLgAeMK-RdY-TetoVdEOSkcMJDhtwzaZGtrxkq3WIDGp7PS7lz6GUktsOimm4UDKC2p0fBkNnENXjSHAGKIpPy8EODu6H3SLDy9g84ZufXwKwy~qufNHob477RhOpaWEvMol4Ng4AfOCorRxdzxaU~UEoQVyX3yfOcDI2l4QTau~8azOh8QfU6Tatz~t8huAGoUOk~5xYHwxk~uAbiUnWiRkezzcJ5Q__" alt="">
+                                </div>
+                                <div class="col col-1"></div>
+                                <div class="col col-8">
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap;">
+                                        <nobr style="font-weight: 600; color: black;" id="name-pizza">
+                                            Pizza Hải Sản - (Cỡ Vừa)
+                                        </nobr>
+                                    </p>
+
+                                    <hr style="size: 2px; color: black;">
+
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap; font-weight: 600; color: black;">
+                                        Số Lượng: 
+                                        <nobr id="so-luong">1</nobr>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row" style="width: 100%; height: auto; border: 1px solid black; border-radius: 10px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 10px;">
+                                <div class="col col-3">
+                                    <img style="width: 111px; height: 85px; border-radius: 10px;" src="https://s3-alpha-sig.figma.com/img/1563/be4b/0ecd51c107707964cb0b4c400bac2b06?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c-Y3lEvSFRVrzelppLoscL4cQBt-6r90UDU8yNX7S1LDPdmGLW-FJ97rqZET0T6Vs2W70hvtBUTs0d3RXLCf-Sf6zrMFcCgo9MUFJS~TDWO6~zyvpU58-feGLgAeMK-RdY-TetoVdEOSkcMJDhtwzaZGtrxkq3WIDGp7PS7lz6GUktsOimm4UDKC2p0fBkNnENXjSHAGKIpPy8EODu6H3SLDy9g84ZufXwKwy~qufNHob477RhOpaWEvMol4Ng4AfOCorRxdzxaU~UEoQVyX3yfOcDI2l4QTau~8azOh8QfU6Tatz~t8huAGoUOk~5xYHwxk~uAbiUnWiRkezzcJ5Q__" alt="">
+                                </div>
+                                <div class="col col-1"></div>
+                                <div class="col col-8">
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap;">
+                                        <nobr style="font-weight: 600; color: black;" id="name-pizza">
+                                            Pizza Hải Sản - (Cỡ Vừa)
+                                        </nobr>
+                                    </p>
+
+                                    <hr style="size: 2px; color: black;">
+
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap; font-weight: 600; color: black;">
+                                        Số Lượng: 
+                                        <nobr id="so-luong">1</nobr>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row" style="width: 100%; height: auto; border: 1px solid black; border-radius: 10px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 10px;">
+                                <div class="col col-3">
+                                    <img style="width: 111px; height: 85px; border-radius: 10px;" src="https://s3-alpha-sig.figma.com/img/1563/be4b/0ecd51c107707964cb0b4c400bac2b06?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c-Y3lEvSFRVrzelppLoscL4cQBt-6r90UDU8yNX7S1LDPdmGLW-FJ97rqZET0T6Vs2W70hvtBUTs0d3RXLCf-Sf6zrMFcCgo9MUFJS~TDWO6~zyvpU58-feGLgAeMK-RdY-TetoVdEOSkcMJDhtwzaZGtrxkq3WIDGp7PS7lz6GUktsOimm4UDKC2p0fBkNnENXjSHAGKIpPy8EODu6H3SLDy9g84ZufXwKwy~qufNHob477RhOpaWEvMol4Ng4AfOCorRxdzxaU~UEoQVyX3yfOcDI2l4QTau~8azOh8QfU6Tatz~t8huAGoUOk~5xYHwxk~uAbiUnWiRkezzcJ5Q__" alt="">
+                                </div>
+                                <div class="col col-1"></div>
+                                <div class="col col-8">
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap;">
+                                        <nobr style="font-weight: 600; color: black;" id="name-pizza">
+                                            Pizza Hải Sản - (Cỡ Vừa)
+                                        </nobr>
+                                    </p>
+
+                                    <hr style="size: 2px; color: black;">
+
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap; font-weight: 600; color: black;">
+                                        Số Lượng: 
+                                        <nobr id="so-luong">1</nobr>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row" style="width: 100%; height: auto; border: 1px solid black; border-radius: 10px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 10px;">
+                                <div class="col col-3">
+                                    <img style="width: 111px; height: 85px; border-radius: 10px;" src="https://s3-alpha-sig.figma.com/img/1563/be4b/0ecd51c107707964cb0b4c400bac2b06?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c-Y3lEvSFRVrzelppLoscL4cQBt-6r90UDU8yNX7S1LDPdmGLW-FJ97rqZET0T6Vs2W70hvtBUTs0d3RXLCf-Sf6zrMFcCgo9MUFJS~TDWO6~zyvpU58-feGLgAeMK-RdY-TetoVdEOSkcMJDhtwzaZGtrxkq3WIDGp7PS7lz6GUktsOimm4UDKC2p0fBkNnENXjSHAGKIpPy8EODu6H3SLDy9g84ZufXwKwy~qufNHob477RhOpaWEvMol4Ng4AfOCorRxdzxaU~UEoQVyX3yfOcDI2l4QTau~8azOh8QfU6Tatz~t8huAGoUOk~5xYHwxk~uAbiUnWiRkezzcJ5Q__" alt="">
+                                </div>
+                                <div class="col col-1"></div>
+                                <div class="col col-8">
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap;">
+                                        <nobr style="font-weight: 600; color: black;" id="name-pizza">
+                                            Pizza Hải Sản - (Cỡ Vừa)
+                                        </nobr>
+                                    </p>
+
+                                    <hr style="size: 2px; color: black;">
+
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap; font-weight: 600; color: black;">
+                                        Số Lượng: 
+                                        <nobr id="so-luong">1</nobr>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row" style="width: 100%; height: auto; border: 1px solid black; border-radius: 10px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 10px;">
+                                <div class="col col-3">
+                                    <img style="width: 111px; height: 85px; border-radius: 10px;" src="https://s3-alpha-sig.figma.com/img/1563/be4b/0ecd51c107707964cb0b4c400bac2b06?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c-Y3lEvSFRVrzelppLoscL4cQBt-6r90UDU8yNX7S1LDPdmGLW-FJ97rqZET0T6Vs2W70hvtBUTs0d3RXLCf-Sf6zrMFcCgo9MUFJS~TDWO6~zyvpU58-feGLgAeMK-RdY-TetoVdEOSkcMJDhtwzaZGtrxkq3WIDGp7PS7lz6GUktsOimm4UDKC2p0fBkNnENXjSHAGKIpPy8EODu6H3SLDy9g84ZufXwKwy~qufNHob477RhOpaWEvMol4Ng4AfOCorRxdzxaU~UEoQVyX3yfOcDI2l4QTau~8azOh8QfU6Tatz~t8huAGoUOk~5xYHwxk~uAbiUnWiRkezzcJ5Q__" alt="">
+                                </div>
+                                <div class="col col-1"></div>
+                                <div class="col col-8">
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap;">
+                                        <nobr style="font-weight: 600; color: black;" id="name-pizza">
+                                            Pizza Hải Sản - (Cỡ Vừa)
+                                        </nobr>
+                                    </p>
+
+                                    <hr style="size: 2px; color: black;">
+
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap; font-weight: 600; color: black;">
+                                        Số Lượng: 
+                                        <nobr id="so-luong">1</nobr>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row" style="width: 100%; height: auto; border: 1px solid black; border-radius: 10px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 10px;">
+                                <div class="col col-3">
+                                    <img style="width: 111px; height: 85px; border-radius: 10px;" src="https://s3-alpha-sig.figma.com/img/1563/be4b/0ecd51c107707964cb0b4c400bac2b06?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c-Y3lEvSFRVrzelppLoscL4cQBt-6r90UDU8yNX7S1LDPdmGLW-FJ97rqZET0T6Vs2W70hvtBUTs0d3RXLCf-Sf6zrMFcCgo9MUFJS~TDWO6~zyvpU58-feGLgAeMK-RdY-TetoVdEOSkcMJDhtwzaZGtrxkq3WIDGp7PS7lz6GUktsOimm4UDKC2p0fBkNnENXjSHAGKIpPy8EODu6H3SLDy9g84ZufXwKwy~qufNHob477RhOpaWEvMol4Ng4AfOCorRxdzxaU~UEoQVyX3yfOcDI2l4QTau~8azOh8QfU6Tatz~t8huAGoUOk~5xYHwxk~uAbiUnWiRkezzcJ5Q__" alt="">
+                                </div>
+                                <div class="col col-1"></div>
+                                <div class="col col-8">
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap;">
+                                        <nobr style="font-weight: 600; color: black;" id="name-pizza">
+                                            Pizza Hải Sản - (Cỡ Vừa)
+                                        </nobr>
+                                    </p>
+
+                                    <hr style="size: 2px; color: black;">
+
+                                    <p style="font-size: 16px; line-height: 18.75px; display: flex; flex-wrap: wrap; font-weight: 600; color: black;">
+                                        Số Lượng: 
+                                        <nobr id="so-luong">1</nobr>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <!-- Menu End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Công Ty</h4>
+                        <a class="btn btn-link" href="">Giới Thiệu</a>
+                        <a class="btn btn-link" href="">Liên Hệ</a>
+                        <a class="btn btn-link" href="">Đặt Bàn</a>
+                        <a class="btn btn-link" href="">Chính Sách Bảo Mật</a>
+                        <a class="btn btn-link" href="">Điều khoản & Điều kiện</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Địa Chỉ</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>268 Lý Thường Kiệt, Phường 14, Quận 10, Hồ Chí Minh</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+028 3864 7256</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>dtqt_tuvan@hcmut.edu.vn</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Thời Gian Mở Cửa</h4>
+                        <h5 class="text-light fw-normal">Thứ Hai - Thứ Sáu</h5>
+                        <p>09AM - 09PM</p>
+                        <h5 class="text-light fw-normal">Thứ Bảy - Chủ Nhật</h5>
+                        <p>10AM - 08PM</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nhận Bản Tin</h4>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="mail của bạn">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Nhóm 2 Database Học Kỳ 241</a>, All Right Reserved. 
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script src="js/hang_cho_don_hang.js"></script>
+</body>
+
+</html>

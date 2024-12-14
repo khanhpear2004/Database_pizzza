@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DANH SÁCH NHÂN VIÊN</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">    
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#search-staff-button").click(function() {
+                searchStaff();
+            });
+
+            $("#search-staff-input").on("keyup", function(event) {
+                if(event.key === "Enter") {
+                    searchStaff();
+                }
+            });
+
+            function searchStaff() {
+                let query = $("#search-staff-input").val().toLowerCase();
+                console.log("Query:", query);
+
+                $('#list-staff-container .container').each(function() {
+                    let staffID = $(this).find("#mnv").text().toLowerCase();
+                    let staffName = $(this).find("#namenv").text().toLowerCase();
+                    console.log("ID:", staffID);
+
+                    if(staffID.includes(query) || staffName.includes(query)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                })
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
+                    <!-- <img src="../img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="index.html" class="nav-item nav-link">Trang chủ</a>
+                        <a href="menu.html" class="nav-item nav-link">Menu</a>
+                        <a href="list_staff.html" class="nav-item nav-link active">Nhân viên</a>
+                        <a href="lich_su.html" class="nav-item nav-link">Lịch sử</a>
+                        <a href="kho_hang.html" class="nav-item nav-link">Kho hàng</a>
+                    </div>
+                    <div class="dropdown">
+                        <div style="position: relative; display: inline-block;">
+                            <img class="rounded-circle dropdown dropdown-toggle" style="width: 45px;" alt="Avatar" data-bs-toggle="dropdown" aria-expanded="false" src="https://s3-alpha-sig.figma.com/img/9a6b/f24f/3ab2b1f66c877c09a8254f7601865724?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hCt-~97g9BrTKv57cFJeTu2RAGILy9HoPH9gqZq1gC-W6Pom5sRxpIndD~Z7NJM8SFV43Fp0MHjDNafgGD0EzDmn6VikUvhjys3ZS6B0d0CJZUV1PNJQfYnFURmm7W6seiy-f2ro-R5~Tl6yQ~7HdInQ8brn1zMETIw2jHWXprG72y2r9vzy5xOQ7TUAtsmAzq-~6GooSsigJQRJlEDN9lsuaI0J~f~c4cOVZnK8QKDEds4GxfQYEkRPWh14wU0HHm~1ffUqI~kMvcCVXkuHX9PcE04EFVppYf2wF7sElDC1RPLPutylw7K9Gi7vv0z2BdBYR5BpMF8Sl0MP4xugyA__"/>
+                            <div style="position: absolute; bottom: 0; right: 0; width: 20px; height: 20px; background-color: pink; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 12px; color: white; font-weight: bold; border: 2px solid white; box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);">
+                                <span>V</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <!-- <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown text-uppercase">Danh sách nhân viên</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Danh sách nhân viên</li>
+                        </ol>
+                    </nav>
+                </div> -->
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Menu Start -->
+        <div class="container-xxl">
+            <div class="container">
+                <p style="font-size: 50px; font-weight: 600; line-height: 65px; color: black;" align="center">
+                    DANH SÁCH NHÂN VIÊN
+                </p>
+
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row">
+                        <div class="col col-3"></div>
+                        <div class="col col-4">
+                            <div class="input-group mb-3">
+                                <input id="search-staff-input" style="border-radius: 10px; border: 1px solid #000000;" type="text" class="form-control" placeholder="NHẬP TÊN HOẶC MÃ NHÂN VIÊN" aria-label="NHẬP TÊN HOẶC MÃ NHÂN VIÊN" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                        <div class="col col-2">
+                            <button id="search-staff-button" class="btn" type="button" style="color: white; background-color: #DC802A; width: 176px; height: 38px; border-radius: 10px;">
+                                TÌM KIẾM
+                            </button>
+                        </div>
+                        <div class="col col-3"></div>
+                    </div>                    
+                </div>
+
+                <div class="text-center wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="container" id="list-staff-container" style="width: 1040px; height: auto; border: 1px solid black; border-radius: 10px; margin-top: 59px; padding: 11px 11px 0px;">
+                        <div class="container" style="width: 100%; height: 129px; border: 1px solid black; border-radius: 10px; margin-bottom: 11px;">
+                            <div class="row" style="height: 100%; background-color: transparent; padding: 18px 16px;">
+                                <div class="col col-2" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 100%;">
+                                    <img class="rounded-circle dropdown dropdown-toggle" style="width: 90px;" alt="Avatar" data-bs-toggle="dropdown" aria-expanded="false" src="https://s3-alpha-sig.figma.com/img/9a6b/f24f/3ab2b1f66c877c09a8254f7601865724?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hCt-~97g9BrTKv57cFJeTu2RAGILy9HoPH9gqZq1gC-W6Pom5sRxpIndD~Z7NJM8SFV43Fp0MHjDNafgGD0EzDmn6VikUvhjys3ZS6B0d0CJZUV1PNJQfYnFURmm7W6seiy-f2ro-R5~Tl6yQ~7HdInQ8brn1zMETIw2jHWXprG72y2r9vzy5xOQ7TUAtsmAzq-~6GooSsigJQRJlEDN9lsuaI0J~f~c4cOVZnK8QKDEds4GxfQYEkRPWh14wU0HHm~1ffUqI~kMvcCVXkuHX9PcE04EFVppYf2wF7sElDC1RPLPutylw7K9Gi7vv0z2BdBYR5BpMF8Sl0MP4xugyA__"/>
+                                </div>
+
+                                <div class="col col-6" style="background-color: transparent;">
+                                    <div class="container">
+                                        <div class="row" style="background-color: transparent;">
+                                            <div class="col col-12" style="display: flex; flex-flow: wrap column; justify-content: flex-start; align-items: flex-start;">
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Mã Nhân Viên: 
+                                                    </nobr>
+                                                  
+                                                    <nobr id="mnv">E-123456</nobr>
+                                                </p>
+                                                
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Tên Nhân Viên: 
+                                                    </nobr>
+                                                    
+                                                    <nobr id="namenv">A</nobr>
+                                                </p>
+
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Số Điện Thoại: 
+                                                    </nobr>
+                                                    
+                                                    <nobr id="sdtnv">0933216169</nobr>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+
+                                <div class="col col-4" style="background-color: transparent; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: flex-end;">
+                                    <a href="staff_info.html" class="btn" type="button" style="color: white; background-color: #F48787; border-radius: 10px; border: 1px solid black; width: 231px; height: 43px; margin-bottom: 18px;">
+                                        LỊCH SỬ LÀM VIỆC
+                                    </a>
+                                </div>  
+                            </div>
+                        </div>
+
+                        <div class="container" style="width: 100%; height: 129px; border: 1px solid black; border-radius: 10px; margin-bottom: 11px;">
+                            <div class="row" style="height: 100%; background-color: transparent; padding: 18px 16px;">
+                                <div class="col col-2" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 100%;">
+                                    <img class="rounded-circle dropdown dropdown-toggle" style="width: 90px;" alt="Avatar" data-bs-toggle="dropdown" aria-expanded="false" src="https://s3-alpha-sig.figma.com/img/9a6b/f24f/3ab2b1f66c877c09a8254f7601865724?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hCt-~97g9BrTKv57cFJeTu2RAGILy9HoPH9gqZq1gC-W6Pom5sRxpIndD~Z7NJM8SFV43Fp0MHjDNafgGD0EzDmn6VikUvhjys3ZS6B0d0CJZUV1PNJQfYnFURmm7W6seiy-f2ro-R5~Tl6yQ~7HdInQ8brn1zMETIw2jHWXprG72y2r9vzy5xOQ7TUAtsmAzq-~6GooSsigJQRJlEDN9lsuaI0J~f~c4cOVZnK8QKDEds4GxfQYEkRPWh14wU0HHm~1ffUqI~kMvcCVXkuHX9PcE04EFVppYf2wF7sElDC1RPLPutylw7K9Gi7vv0z2BdBYR5BpMF8Sl0MP4xugyA__"/>
+                                </div>
+
+                                <div class="col col-6" style="background-color: transparent;">
+                                    <div class="container">
+                                        <div class="row" style="background-color: transparent;">
+                                            <div class="col col-12" style="display: flex; flex-wrap: wrap; justify-content: flex-start;">
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Mã Nhân Viên: 
+                                                    </nobr>
+                                                  
+                                                    <nobr id="mnv">E-123456</nobr>
+                                                </p>
+                                                
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Tên Nhân Viên: 
+                                                    </nobr>
+                                                    
+                                                    <nobr id="namenv">Lê Nguyễn Nam Khánh</nobr>
+                                                </p>
+
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Số Điện Thoại: 
+                                                    </nobr>
+                                                    
+                                                    <nobr id="sdtnv">0933216169</nobr>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+
+                                <div class="col col-4" style="background-color: transparent; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: flex-end;">
+                                    <a href="staff_info.html" class="btn" type="button" style="color: white; background-color: #F48787; border-radius: 10px; border: 1px solid black; width: 231px; height: 43px; margin-bottom: 18px;">
+                                        LỊCH SỬ LÀM VIỆC
+                                    </a>
+                                </div>  
+                            </div>
+                        </div>
+
+                        <div class="container" style="width: 100%; height: 129px; border: 1px solid black; border-radius: 10px; margin-bottom: 11px;">
+                            <div class="row" style="height: 100%; background-color: transparent; padding: 18px 16px;">
+                                <div class="col col-2" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 100%;">
+                                    <img class="rounded-circle dropdown dropdown-toggle" style="width: 90px;" alt="Avatar" data-bs-toggle="dropdown" aria-expanded="false" src="https://s3-alpha-sig.figma.com/img/9a6b/f24f/3ab2b1f66c877c09a8254f7601865724?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hCt-~97g9BrTKv57cFJeTu2RAGILy9HoPH9gqZq1gC-W6Pom5sRxpIndD~Z7NJM8SFV43Fp0MHjDNafgGD0EzDmn6VikUvhjys3ZS6B0d0CJZUV1PNJQfYnFURmm7W6seiy-f2ro-R5~Tl6yQ~7HdInQ8brn1zMETIw2jHWXprG72y2r9vzy5xOQ7TUAtsmAzq-~6GooSsigJQRJlEDN9lsuaI0J~f~c4cOVZnK8QKDEds4GxfQYEkRPWh14wU0HHm~1ffUqI~kMvcCVXkuHX9PcE04EFVppYf2wF7sElDC1RPLPutylw7K9Gi7vv0z2BdBYR5BpMF8Sl0MP4xugyA__"/>
+                                </div>
+
+                                <div class="col col-6" style="background-color: transparent;">
+                                    <div class="container">
+                                        <div class="row" style="background-color: transparent;">
+                                            <div class="col col-12" style="display: flex; flex-wrap: wrap; justify-content: flex-start;">
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Mã Nhân Viên: 
+                                                    </nobr>
+                                                  
+                                                    <nobr id="mnv">E-123456</nobr>
+                                                </p>
+                                                
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Tên Nhân Viên: 
+                                                    </nobr>
+                                                    
+                                                    <nobr id="namenv">Lê Nguyễn Nam Khánh</nobr>
+                                                </p>
+
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Số Điện Thoại: 
+                                                    </nobr>
+                                                    
+                                                    <nobr id="sdtnv">0933216169</nobr>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+
+                                <div class="col col-4" style="background-color: transparent; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: flex-end;">
+                                    <a href="staff_info.html" class="btn" type="button" style="color: white; background-color: #F48787; border-radius: 10px; border: 1px solid black; width: 231px; height: 43px; margin-bottom: 18px;">
+                                        LỊCH SỬ LÀM VIỆC
+                                    </a>
+                                </div>  
+                            </div>
+                        </div>
+
+                        <div class="container" style="width: 100%; height: 129px; border: 1px solid black; border-radius: 10px; margin-bottom: 11px;">
+                            <div class="row" style="height: 100%; background-color: transparent; padding: 18px 16px;">
+                                <div class="col col-2" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 100%;">
+                                    <img class="rounded-circle dropdown dropdown-toggle" style="width: 90px;" alt="Avatar" data-bs-toggle="dropdown" aria-expanded="false" src="https://s3-alpha-sig.figma.com/img/9a6b/f24f/3ab2b1f66c877c09a8254f7601865724?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hCt-~97g9BrTKv57cFJeTu2RAGILy9HoPH9gqZq1gC-W6Pom5sRxpIndD~Z7NJM8SFV43Fp0MHjDNafgGD0EzDmn6VikUvhjys3ZS6B0d0CJZUV1PNJQfYnFURmm7W6seiy-f2ro-R5~Tl6yQ~7HdInQ8brn1zMETIw2jHWXprG72y2r9vzy5xOQ7TUAtsmAzq-~6GooSsigJQRJlEDN9lsuaI0J~f~c4cOVZnK8QKDEds4GxfQYEkRPWh14wU0HHm~1ffUqI~kMvcCVXkuHX9PcE04EFVppYf2wF7sElDC1RPLPutylw7K9Gi7vv0z2BdBYR5BpMF8Sl0MP4xugyA__"/>
+                                </div>
+
+                                <div class="col col-6" style="background-color: transparent;">
+                                    <div class="container">
+                                        <div class="row" style="background-color: transparent;">
+                                            <div class="col col-12" style="display: flex; flex-wrap: wrap; justify-content: flex-start;">
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Mã Nhân Viên: 
+                                                    </nobr>
+                                                  
+                                                    <nobr id="mnv">E-123456</nobr>
+                                                </p>
+                                                
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Tên Nhân Viên: 
+                                                    </nobr>
+                                                    
+                                                    <nobr id="namenv">Lê Nguyễn Nam Khánh</nobr>
+                                                </p>
+
+                                                <p style="font-size: 16px; line-height: 20.8px; text-underline-position: from-font; color: #000000;">
+                                                    <nobr style="font-weight: bold;">
+                                                        Số Điện Thoại: 
+                                                    </nobr>
+                                                    
+                                                    <nobr id="sdtnv">0933216169</nobr>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+
+                                <div class="col col-4" style="background-color: transparent; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: flex-end;">
+                                    <a href="staff_info.html" class="btn" type="button" style="color: white; background-color: #F48787; border-radius: 10px; border: 1px solid black; width: 231px; height: 43px; margin-bottom: 18px;">
+                                        LỊCH SỬ LÀM VIỆC
+                                    </a>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center wow fadeInUp" data-wow-delay="0.3s" style="margin-top: 2%;">
+                    <a href="logup.html" style="background-color: #DC802A; border-radius: 20px; width: 40%; color: white;" class="btn">
+                        Thêm Nhân Viên
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Công Ty</h4>
+                        <a class="btn btn-link" href="">Giới Thiệu</a>
+                        <a class="btn btn-link" href="">Liên Hệ</a>
+                        <a class="btn btn-link" href="">Đặt Bàn</a>
+                        <a class="btn btn-link" href="">Chính Sách Bảo Mật</a>
+                        <a class="btn btn-link" href="">Điều khoản & Điều kiện</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Địa Chỉ</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>268 Lý Thường Kiệt, Phường 14, Quận 10, Hồ Chí Minh</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+028 3864 7256</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>dtqt_tuvan@hcmut.edu.vn</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Thời Gian Mở Cửa</h4>
+                        <h5 class="text-light fw-normal">Thứ Hai - Thứ Sáu</h5>
+                        <p>09AM - 09PM</p>
+                        <h5 class="text-light fw-normal">Thứ Bảy - Chủ Nhật</h5>
+                        <p>10AM - 08PM</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nhận Bản Tin</h4>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="mail của bạn">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Nhóm 2 Database Học Kỳ 241</a>, All Right Reserved. 
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script src="js/list_staff.js"></script>
+</body>
+
+</html> 
